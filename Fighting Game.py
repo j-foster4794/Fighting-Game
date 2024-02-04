@@ -25,14 +25,14 @@ class Player(pg.sprite.Sprite):
         global instances
        
         if instances == 0:
-            image = pg.image.load("Free time coding/Fighting Game/FightingGamePlayer1.png").convert()
+            image = pg.image.load("H:\James School Work\A Level\Comp Sci\Coding\Python Coding\Fighting Game\FightingGamePlayer1.png").convert()
             image = pg.transform.scale(image,(50,100))
             self.surf = image
             self.rect = self.surf.get_rect(bottomleft = (200, 800))
             instances += 1
             self.instance = True
         else:
-            image = pg.image.load("H:\James School Work\A Level\Comp Sci\Coding\Free time coding\Fighting Game\FightingGamePlayer2.png").convert()
+            image = pg.image.load("H:\James School Work\A Level\Comp Sci\Coding\Python Coding\Fighting Game\FightingGamePlayer2.png").convert()
             image = pg.transform.scale(image,(50,100))
             self.surf = image
             self.rect = self.surf.get_rect(bottomright = (800, 800))
@@ -131,7 +131,7 @@ class bullet(pg.sprite.Sprite):
     
     def __init__(self,x,y,direction):
         pg.sprite.Sprite.__init__(self)
-        image = pg.image.load("H:\James School Work\A Level\Comp Sci\Coding\Free time coding\Fighting Game\FightingGameBullet.png").convert()
+        image = pg.image.load("H:\James School Work\A Level\Comp Sci\Coding\Python Coding\Fighting Game\FightingGameBullet.png").convert()
         image = pg.transform.scale(image,(25,10))
         if direction:
             image = pg.transform.rotate(image,180)
@@ -180,13 +180,13 @@ while running:
     if player1.health <= 0:
         while running:
             eventhandling()
-            bg = pg.image.load("H:\James School Work\A Level\Comp Sci\Coding\Free time coding\Fighting Game\Player2wins.png")
+            bg = pg.image.load("H:\James School Work\A Level\Comp Sci\Coding\Python Coding\Fighting Game\Player2wins.png")
             screen.blit(bg,(0,0))
             pg.display.flip()
     elif player2.health <= 0:
         while running:
             eventhandling()
-            bg = pg.image.load("H:\James School Work\A Level\Comp Sci\Coding\Free time coding\Fighting Game\Player1wins.png")
+            bg = pg.image.load("H:\James School Work\A Level\Comp Sci\Coding\Python Coding\Fighting Game\Player1wins.png")
             screen.blit(bg,(0,0))
             pg.display.flip()
     clock.tick(60)
